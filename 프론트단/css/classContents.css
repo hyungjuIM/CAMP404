@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Source+Sans+Pro&display=swap');
+
+.bodyContainer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/*body-nav*/
+.bodyContainer>nav {
+    width: 30%;
+    height: 970px;
+    background-color: #e1e1e1;
+}
+
+/* <nav> 안녕하세요. 김철수님 */
+.summary-Container {
+    width: 40%;
+    height: 780px;
+    margin-left: 50px;
+}
+.hiUser {
+    width: 300%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    /*안녕하세요 * 님 폰트 크기, 행간 조절*/
+    line-height: 38px;
+    font-size: 30px;
+    font-weight: 450;
+}
+
+/*가명: 김철수님*/
+.userName {
+    font-weight: 800;
+    font-size: 30px;
+}
+
+/* 나의강의장, 찜목록, 정보수정 버튼 */
+.content-contaienr {
+    width: 300px;
+    height: 1000px;
+    margin-left: 100px;
+}
+.content-1 {
+    width: 200%;
+    height: 60px;
+
+    background-color: #333333;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+
+    cursor: pointer;
+
+    
+}
+.content-1>a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* 로그아웃버튼 */
+.logout {
+    color: #fe6936;
+    font-weight: bolder;
+    background-color: transparent;
+    border: 0 none;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 100%;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*------------------body-content------------------*/
+
+/* 나의 정보 본문 */
+.content-Area {
+    width: 70%;
+    height: 970px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+/* 전제목록, 수강중, 수강완료  버튼 부분 */
+.class-btnpart {
+    width: 85%;
+    height: 50px;
+    background-color: transparent;
+    
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-bottom: 60px;
+
+    
+}
+.class-btnpart>span {
+    height: 80%;
+    font-size: 16px;
+    border-radius: 50px;
+    background-color: #e0e0e0;
+    color: #818181;
+    font-weight: 500;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    margin-right: 10px;
+    padding: 10px 15px 9px 15px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+
+    flex: none;
+}
+
+/* 나의강의찾기 input부분 */
+.mySearchBarWrapper{
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    
+    padding-left: 10px;
+    font-size: 16px;
+    height: 36px;
+    margin-left: 320px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    display: flex;
+    align-items: center; 
+}
+.mySearchBarWrapper > i {
+    color:  #e0e0e0;
+}
+
+/*class-content-1 / 강의 목록 */
+.class-contentpart{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.class-content{
+    width: 85%;
+    height: 300px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#class-content-1{
+    width: 30%;
+    height: 80%;
+    background-color: #fe6936;
+    border-radius: 30px;
+    overflow: hidden;
+}
+/* 강의 목록 -> 이미지 */
+.class1 > img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover; top: 0; left: 0;
+    background-size: contain;
+}
+.class2 > img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover; top: 0; left: 0;
+    background-size: contain;
+}
+.class3 > img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    background-size: contain;
+}
+
+/* 강의구분div */

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>   
-    <link rel="stylesheet" href="/프론트단/css/login.css">
-    <script src="/프론트단/js/login.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -19,7 +19,7 @@
 
     <div class="login-container">
         
-           <div> <img src="/프론트단/로고/CAMP404(기본).png"></div>
+           <div> <img src="/로고/CAMP404(기본).png"></div>
                 <form method="post" id="login-form" autocomplete="off">
                     <input type="text" name="userId" id="userId" placeholder="아이디">
                     <input type="password" name="userPw" id="userPw" placeholder="비밀번호">
@@ -40,7 +40,7 @@
         $(function(){
             var include1 = $('[data-include1="header"]');
             jQuery.each(include1,function(){
-                $(this).load('/프론트단/html/header.html');
+                $(this).load('/html/header.html');
             });
         });
 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강의목차</title>
+
+    <link rel="stylesheet" href="/프론트단/css/classContents.css">
+
+</head>
+
+<body>
+    <heder>
+        <div data-include1="header" id="header"></div>
+
+    </heder>
+    <div class="bodyContainer">
+        <nav class="nav-Area">
+            <div class="summary-Container">
+                <!-- 안녕하세요 * 님 -->
+                <div class="hiUser">안녕하세요.<br>
+                    <span class="userName">김철수</span> 님!
+                </div>
+                <!-- 나의강의장, 찜목록, 정보수정버튼 -->
+                <div class="content-container">
+                    <div class="content-1">
+                        <a href="/프론트단/html/classroom.html">
+                            <span>나의 강의장</span>
+                        </a>
+                    </div>
+                    <div class="content-1">
+                        <a href="#">
+                            <span>나의 찜목록</span>
+                        </a>
+                    </div>
+                    <div class="content-1">
+                        <a href="#">
+                            <span>회원정보 수정</span>
+                        </a>
+                    </div>
+                    <!-- 로그아웃 -->
+                    <button class="logout">로그아웃</button>
+                </div>
+            </div>
+        </nav>
+        <!-- ---------------------------------------------- -->
+        <!-- 나의 정보 본문 -->
+        <div class="content-Area">
+            <div class="class-btnpart">
+                <span class="class-btn">전체 목록</span>
+                <span class="class-btn">수강중</span>
+                <span class="class-btn">수강완료</span>
+
+                <div class="mySearchBarWrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i><input class="searchBar" placeholder="나의 강의 찾기" />
+                </div>
+            </div>
+            <div class="class-contentpart">
+                <div class="class-content">
+                    <div id="class-content-1" class="class1">
+                        <img src="/프론트단/img/3ddesign-parkjinbeom-coursecard.png">
+                    </div>
+                    <div id="class-content-1" class="class2">
+                        <img src="/프론트단/img/3ddesign-parkjinbeom-coursecard.png">
+                    </div>
+                    <div id="class-content-1" class="class3">
+                        <img src="/프론트단/img/3ddesign-parkjinbeom-coursecard.png">
+                    </div>
+                    <div ></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery 라이브러리 추가 -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+                var include1 = $('[data-include1="header"]');
+                jQuery.each(include1, function () {
+                    $(this).load('/프론트단/html/header.html');
+                });
+            });
+
+        </script>
+</body>
+
+
+</html>

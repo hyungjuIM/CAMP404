@@ -23,6 +23,7 @@
 
 
 
+
         <section class="notice">
             <div class="page-title">
 
@@ -145,6 +146,7 @@
 
         </section>
 
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -152,7 +154,9 @@
     <script>
         $(function () {
             var include1 = $('[data-include1="header"]');
+
             jQuery.each(include1, function () {
+
                 $(this).load('/html/header.html');
             });
         });
