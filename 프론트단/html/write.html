@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기 페이지</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"  href="/css/header.css">
+    <link rel="stylesheet"  href="/css/write.css">
+
+    <!-- SunEdtor css -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/suneditor.min.css"> -->
+
+    <!-- <script type="text/javascript">
+        function validateForm(form){  // 필수 항목 입력 확인
+            if(form.name.value == ""){
+                alert("작성자를 입력하세요.");
+                form.name.focus();
+                return false;
+            }
+            if(form.title.value == ""){
+                alert("제목을 입력하세요.");
+                form.title.focus();
+                return false;
+            }
+            if(form.content.value == ""){
+                alert("내용을 입력하세요.");
+                form.content.focus();
+                return false;
+            }
+        }
+    </script> -->
+
+</head>
+<body>
+    
+    <header>
+        <div data-include1="header" id="header"></div>
+    </header>
+
+
+
+    <!-- <form name="writeFrm" method="" enctype="multipart/form-data" 
+    action="" onsubmit="return validateForm(this);"> -->
+    <form action="" class="write-form"></form>
+        <div class="write-layout">
+            <div class="write-title">
+                <p>글 작성하기</p>
+            </div>
+            <div class="info-title">
+                <div class="topic">
+                    <label for="" class="categoryCode">토픽</label>
+                    <select name="" id="" class="">
+                        <option value="">토픽을 선택해주세요</option>
+                        <option value="">[필독]</option>
+                        <option value="">[공지]</option>
+                        <option value="">[알림]</option>
+                    </select>
+                </div>
+
+                <div class="title">
+                    <label for="" class="write-frm-title">제목</label>
+                    <input class="title-input" type="text" placeholder="제목을 입력해주세요.">
+                </div>
+
+                <div class="write-content">
+                    <label for="" class="write-content-title">본문</label>
+                        <div class="edit-frm">
+                            <div class="edit-menu" >
+                                <!-- 굵기 -->
+                                <button type="button" class="btn-bold" value="Bold" onclick="setStyle()">
+                                    B
+                                </button>
+                                <!-- 기울임 -->
+                                <button class="btn-italic">
+                                    <i>I</i>
+                                </button>
+                                <!-- 밑줄선 -->
+                                <button class="btn-underline">
+                                    <u>U</u>
+                                </button>
+                                <!-- 취소선 -->
+                                <button class="btn-strike">
+                                    <s>S</s>
+                                </button>
+                                <!-- 숫자목록 -->
+                                <button class="btn-ordered-list">
+                                    OL
+                                </button>
+                                <!-- 기호목록 -->
+                                <button class="btn-unordered-list">
+                                    UL
+                                </button>
+                                <!-- 이미지 -->
+                                <button class="btn-image">
+                                    IMG
+                                </button>
+                            </div>
+                            <div class="write-content-frm" contenteditable="true" 
+                            aria-placeholder="내용을 입력하세요.">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div>
+                    <div>
+                  <table style="text-align: center; border: 1px solid #dddddd">
+                      <thead>
+                        <tr>
+                          <th colspan="5">게시판 글쓰기 양식</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="5" ><input type="text" id="title" class="form-control" placeholder="글 제목" name="title" maxlength="50"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="5" ><textarea class="form-control" id="content" placeholder="글 내용" name="content" maxlength="2048" style="height:350px;"></textarea></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                  <button id="saveButton" type="submit" class="btn btn-dark" onclick="saveButton()">글쓰기</button>
+                  <br>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <div class="frm-button">
+                <button class="cancelBtn" onclick="location.href='/html/notice.html'">취소</button>
+                <button class="submitBtn">등록</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(function () {
+        var include1 = $('[data-include1="header"]');
+
+        jQuery.each(include1, function () {
+
+            $(this).load('/html/header.html');
+        });
+    });
+    </script>
+
+    <script src="/js/editFrm.js"></script>
+    
+    <!-- SunEdtor js
+    <script src="js/suneditor.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script> -->
+
+</body>
+</html>
